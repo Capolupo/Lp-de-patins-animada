@@ -43,6 +43,7 @@ section.hero {
     animation: slideUp 6s 2s infinite ease;
   }
 
+  /*Buttons*/
   & .buttons {
     display: flex;
     gap: 2rem;
@@ -68,12 +69,14 @@ section.hero {
         background-color: white;
         display: flex;
       }
-
+      
+      /*para quando passar o mouse em cima ele dar o efeito de pulinho*/
       &:hover {
         transform: scale(1.1);
       }
     }
 
+    /*Aqui esta rolando multiplas sombras em cascata, para ficar gradativo*/
     & .shadow {
       box-shadow:
         0 2px 5px rgb(0 0 0 / .1),
