@@ -7,6 +7,8 @@ section.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /*Desconsidera tudo que esta por fora do hero*/
   overflow: hidden;
 
   & h1 {
@@ -69,7 +71,7 @@ section.hero {
         background-color: white;
         display: flex;
       }
-      
+
       /*para quando passar o mouse em cima ele dar o efeito de pulinho*/
       &:hover {
         transform: scale(1.1);
@@ -86,9 +88,12 @@ section.hero {
     }
   }
 
+  /*Patins*/
+  /*Na div pega o segundo nivel de div*/
   &>div:nth-child(2) {
     display: block;
     width: 100%;
+    /*Largura e altura maxima definida*/
     max-width: 30.5rem;
     height: 30.5rem;
 
@@ -103,15 +108,20 @@ section.hero {
       width: 100%;
     }
 
+    /*Na imagem que tem a bolinha azul*/
     & img[src*="ellipse"] {
+      /*afasta a bolinha das bordas*/
       width: 94%;
       top: 3%;
       left: 3%;
 
+      /*Joga a imagem bolinha para fora da cena*/
       transform: translateX(200%);
+      /*E agora tras ela para dentro*/
       animation: slideIn 3s 200ms ease forwards;
     }
 
+    /*Patins esta por cima das coisas*/
     & img[src*="patins"] {
       z-index: 1;
 
@@ -119,6 +129,7 @@ section.hero {
       animation: slideIn 3s ease forwards;
     }
 
+    /*Posiciona as estrelinhas*/
     & img[src*="stars-1"] {
       top: 30%;
       max-width: 5.5rem;
@@ -216,6 +227,7 @@ section.hero {
   }
 }
 
+/*Animações do patins*/
 @keyframes slideIn {
   50% {
     transform: translateX(-20px);
